@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Deletion-resilient hypermedia pagination"""
+"""Create deletion-resilient hypermedia pagination."""
 import csv
 from typing import Dict, List
 
 
 class Server:
-    """Server class to paginate a database of popular baby names."""
+    """Create server class to paginate a database of popular baby names."""
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -24,7 +24,7 @@ class Server:
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
-        """Dataset indexed by sorting position, starting at 0."""
+        """Create dataset indexed by sorting position, starting at 0."""
         if self.__indexed_dataset is None:
             dataset = self.dataset()
             truncated_dataset = dataset[:1000]
